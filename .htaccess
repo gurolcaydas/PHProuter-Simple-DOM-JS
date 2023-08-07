@@ -1,0 +1,11 @@
+# Apache yeniden/üzerine yazmayı aç
+RewriteEngine On
+
+# dosya mı yada klasör mü kontrol et. (!-f dosya olmayanlar anlamında)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Koşullar uygunsa yeniden yazma kuralımız:
+RewriteRule ^(.*)$ index.php?url=$1 [QSA,L]
+# QSA - query string append: URL'de ?baska=birsey varsa sona ekle.
+# L - last: Bu kural, koşullar sağlandığında işlem görecek son kural
