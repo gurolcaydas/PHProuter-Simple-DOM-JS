@@ -1,6 +1,7 @@
 <html>
     <body>
-        <h2> Örnek linkler </h2>
+        <h2> Simple Router for PHP </h2>
+        <h4> Örnek linkler </h4>
         <a href="/tek"> /tek </a><br>
         <a href="/cok"> /cok </a><br>
         <a href="/cok/bilgi"> /cok/bilgi </a><br>
