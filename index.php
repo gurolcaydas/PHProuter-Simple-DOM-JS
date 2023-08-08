@@ -1,9 +1,9 @@
-<html>
+<html lang="">
     <body>
         <h2> Simple Router for PHP </h2>
         <h4> Örnek linkler </h4>
         <a href="/tek"> /tek </a><br>
-        <a href="/tek?falan=3"> /tek?falan=3 </a><br>
+        <a href="/tek?falan=1"> /tek?falan=1 </a><br>
         <a href="/cok"> /cok </a><br>
         <a href="/cok/bilgi"> /cok/bilgi </a><br>
         <a href="/cok/777"> /cok/777 </a><br> 
@@ -17,57 +17,50 @@
             $ilkkelime = $veri[0]; // URL'deki $veri[0] ilk kelime, $veri[1] ikinci kelime vs...
             if (isset($_GET['falan'])) {
                 $falan = $_GET['falan'];
+                    ?>
+                    <!-- JS gerek yoksa silinebilir - baş -->
+                    <script>
+                        console.log ("falan:<?=$falan?>");
+                    </script>
+                    <!-- JS gerek yoksa silinebilir - son -->
+                     <?php
             }
             // URL'deki ilk kelimeye göre switch
             switch ($ilkkelime) {
                 case "tek":  // URL: /tek
-
                     // gerekli kodları dışardan ekleyelim.
-                    include('tek.php');?> 
-
+                    include('tek.php');?>
                     <!-- JS gerek yoksa silinebilir - baş -->
                     <script> 
-                        console.log ("ihtiyaç varsa JS fonksiyonu kullanılabilir (tek)");  
+                        console.log ("tek");
                     </script>
                     <!-- JS gerek yoksa silinebilir - son -->
-
-                    <?php 
-
-                    
+                    <?php
                     break;
-
-
                 case "cok": // URL: /cok
                     if (isset($veri[1])) {    // URL: /cok/bilgi
-                        $bilgi = $veri[1];  ?> 
-
+                        $bilgi = $veri[1];  ?>
                         <!-- JS gerek yoksa silinebilir - baş -->
                         <script> 
-                            console.log ("ihtiyaç varsa JS fonksiyonu kullanılabilir (if)"); 
-                            console.log ("url'den gelen id:<?=$bilgi?>");
+                            console.log ("cok (if)");
+                            console.log ("bilgi:<?=$bilgi?>");
                         </script>
                         <!-- JS gerek yoksa silinebilir - son -->
-
                         <?php 
 
-                        // gerekli kodları dışardan ekleyelim.
-                        include ('cok.php');
                     } else { // URL: /cok
-                        ?> 
-
+                        ?>
                         <!-- JS gerek yoksa silinebilir - baş -->
                         <script>
-                            console.log ("ihtiyaç varsa JS fonksiyonu kullanılabilir (else)");
+                            console.log ("cok (else)");
                         </script>
                         <!-- JS gerek yoksa silinebilir - son -->
-                        <?php 
-
-                        // Gerekli kodları dışardan ekleyelim..
-                        include ('cok.php');
+                        <?php
                         }
+                    // Gerekli kodları dışardan ekleyelim..
+                    include ('cok.php');
                     break;
                 default:  // Bulunamadı
-
                     include('404.php');
                     break;
             }
