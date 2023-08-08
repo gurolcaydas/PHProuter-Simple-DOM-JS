@@ -8,6 +8,7 @@
         <a href="/cok/bilgi"> /cok/bilgi </a><br>
         <a href="/cok/777"> /cok/777 </a><br> 
         <a href="/cok/777?falan=3"> /cok/777?falan=3 </a><br> 
+        <a href="/olmayanlink"> /olmayanlink </a><br> 
         
         <?php
         if (isset($_GET['url'])) {
