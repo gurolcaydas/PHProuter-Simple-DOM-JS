@@ -3,16 +3,20 @@
         <h2> Simple Router for PHP </h2>
         <h4> Örnek linkler </h4>
         <a href="/tek"> /tek </a><br>
+        <a href="/tek?falan=3"> /tek?falan=3 </a><br>
         <a href="/cok"> /cok </a><br>
         <a href="/cok/bilgi"> /cok/bilgi </a><br>
         <a href="/cok/777"> /cok/777 </a><br> 
+        <a href="/cok/777?falan=3"> /cok/777?falan=3 </a><br> 
         
         <?php
         if (isset($_GET['url'])) {
             $urlSatiri = $_GET['url'];  // URL'yi kap.
             $veri = explode('/', $urlSatiri);  // URL'yi patlat.
             $ilkkelime = $veri[0]; // URL'deki $veri[0] ilk kelime, $veri[1] ikinci kelime vs...
-
+            if (isset($_GET['falan'])) {
+                $falan = $_GET['falan'];
+            }
             // URL'deki ilk kelimeye göre switch
             switch ($ilkkelime) {
                 case "tek":  // URL: /tek
@@ -61,7 +65,7 @@
                         include ('cok.php');
                         }
                     break;
-                default:
+                default:  // Bulunamadı
 
                     include('404.php');
                     break;
