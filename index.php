@@ -18,7 +18,17 @@
                 case "tek":  // URL: /tek
 
                     // gerekli kodları dışardan ekleyelim.
-                    include('tek.php');
+                    include('tek.php');?> 
+
+                    <!-- JS gerek yoksa silinebilir - baş -->
+                    <script> 
+                        console.log ("ihtiyaç varsa JS fonksiyonu kullanılabilir (tek)");  
+                    </script>
+                    <!-- JS gerek yoksa silinebilir - son -->
+
+                    <?php 
+
+                    
                     break;
 
 
