@@ -46,8 +46,7 @@
                             console.log ("bilgi:<?=$bilgi?>");
                         </script>
                         <!-- JS gerek yoksa silinebilir - son -->
-                        <?php 
-
+                        <?php
                     } else { // URL: /cok
                         ?>
                         <!-- JS gerek yoksa silinebilir - baş -->
