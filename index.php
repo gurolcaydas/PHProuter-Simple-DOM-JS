@@ -15,7 +15,7 @@
             $urlSatiri = $_GET['url'];  // URL'yi kap.
             $veri = explode('/', $urlSatiri);  // URL'yi patlat.
             $ilkkelime = $veri[0]; // URL'deki $veri[0] ilk kelime, $veri[1] ikinci kelime vs...
-            if (isset($_GET['falan'])) {
+            if (isset($_GET['falan'])) {  // URL'de ?falan=x  var mı?
                 $falan = $_GET['falan'];
                     ?>
                     <!-- JS gerek yoksa silinebilir - baş -->
