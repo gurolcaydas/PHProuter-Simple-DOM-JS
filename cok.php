@@ -5,7 +5,7 @@
 if (isset($bilgi)) { // direk PHP değişkenleri ile index.php den bilgi gelebilir.
     echo ("Url'den gelen bilgi: ".$bilgi);
 } else {
-    echo "Bilgi yok.";
+    echo "bilgi yok.";
 }
 echo ("<br>");
 if (isset($falan)) { // direk PHP değişkenleri ile index.php den bilgi gelebilir.

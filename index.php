@@ -74,19 +74,27 @@
                         break;
                     default:  // Bulunamadı
                         include('404.php');
-                        break;
+                        exit;
                 }
             }     
             ?>
         </div>
         <div class="container m-4 p-2 border-1">
             <h3>JS DOM</h3> 
-            <div class="row">
-            <div class="col">
-                <a href="javascript:void(0)" onclick="leftDiv()">1 Yenile</a> 
-                <a href="javascript:void(0)" onclick="rightDiv()">2 Yenile</a></div>
-            <div class="col border border-3 rounded p-2 m-2" id="leftDiv">1</div>
-            <div class="col border border-3 rounded p-2 m-2" id="rightDiv">2</div></div>
+            <div class="row ">
+
+            <div class="col bg-dark bg-opacity-25 border border-3 rounded p-2 m-2" id="leftDivMenu">
+                    <a href="javascript:void(0)" onclick="leftDiv()">fetch leftDiv.php</a> 
+                </div>
+                <div class="col bg-dark bg-opacity-25 border border-3 rounded p-2 m-2" id="rightDivMenu">
+                    <a href="javascript:void(0)" onclick="rightDiv()">fetch rightDiv.php</a>
+                </div>
+            </div>
+            <div class=" row">
+                <div class="col border border-3 rounded p-2 m-2" id="leftDiv">1</div>
+                <div class="col border border-3 rounded p-2 m-2" id="rightDiv">2</div>
+            </div>
+        </div>
         </div>
     </body>
 </html>
