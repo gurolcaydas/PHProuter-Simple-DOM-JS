@@ -6,21 +6,20 @@
     <script type="text/javascript" src="/DOM.js"></script>
     <script src="https://kit.fontawesome.com/cf469ca1da.js" crossorigin="anonymous"></script>
     </head>
-    <body>
+    <body class="d-flex flex-column min-vh-100">
         <div class="container m-4 p-2 boder-1">
 
 
             <h2> Simple Router for PHP </h2>
             <h4> Örnek linkler </h4>
             <div class="row">
-           
-            <a href="/tek"><i class="fas fa-arrow-right me-3"></i>/tek </a><br>
-            <a href="/tek?falan=1"><i class="fas fa-arrow-right me-3"></i>/tek?falan=1 </a><br>
-            <a href="/cok"><i class="fas fa-arrow-right me-3"></i>/cok </a><br>
-            <a href="/cok/bilgi"><i class="fas fa-arrow-right me-3"></i>/cok/bilgi </a><br>
-            <a href="/cok/777"><i class="fas fa-arrow-right me-3"></i>/cok/777 </a><br> 
-            <a href="/cok/777?falan=3"><i class="fas fa-arrow-right me-3"></i>/cok/777?falan=3 </a><br> 
-            <a href="/olmayanlink"><i class="fas fa-arrow-right me-3"></i>/olmayanlink </a><br> 
+			  <a href="/tek"><i class="fas fa-arrow-right me-3"></i>/tek </a><br>
+			  <a href="/tek?falan=1"><i class="fas fa-arrow-right me-3"></i>/tek?falan=1 </a><br>
+			  <a href="/cok"><i class="fas fa-arrow-right me-3"></i>/cok </a><br>
+			  <a href="/cok/bilgi"><i class="fas fa-arrow-right me-3"></i>/cok/bilgi </a><br>
+			  <a href="/cok/777"><i class="fas fa-arrow-right me-3"></i>/cok/777 </a><br> 
+			  <a href="/cok/777?falan=3"><i class="fas fa-arrow-right me-3"></i>/cok/777?falan=3 </a><br> 
+			  <a href="/olmayanlink"><i class="fas fa-arrow-right me-3"></i>/olmayanlink </a><br> 
             </div>
             
             <?php
@@ -96,5 +95,6 @@
             </div>
         </div>
         </div>
+    <footer class="bg-dark text-light p-2 text-center fixed-bottom">Footer</footer>
     </body>
 </html>
